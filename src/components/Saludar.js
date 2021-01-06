@@ -1,6 +1,10 @@
 import React from 'react';
 
 export default function Saludar(props) {
+  if (props.userInfo && props.saludarFn) {
+    const { userInfo, saludarFn } = props;
+    const { name = "Anonimo" } = userInfo;
+  }
   console.log(props);
   return(
     <div>

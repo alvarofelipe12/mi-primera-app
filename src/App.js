@@ -3,6 +3,7 @@ import './App.css';
 import HolaMundo from './components/HolaMundo';
 import AdiosMundo from './components/AdiosMundo';
 import Saludar from './components/Saludar';
+import Button from 'react-bootstrap/Button';
 
 function App() {
   const username = "Felipe Garcia";
@@ -13,11 +14,12 @@ function App() {
     color: "Blue"
   };
   const saludarFn = name => {
-    console.log("Hi " + name );
+    console.log(`Hi ${name}`);
   };
   return (
     <div className="App">
       <header className="App-header">
+        <Button variant="primary" onClick={() => console.log('Hi')}>Primary</Button>
         <img src={logo} className="App-logo" alt="logo" />
         <HolaMundo />
         <AdiosMundo />
